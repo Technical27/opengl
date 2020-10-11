@@ -30,50 +30,47 @@ struct Vertex {
 // rustfmt ruins the formating of the vertices on sperate lines
 #[rustfmt::skip]
 static VERTICES: [GLfloat; 180] = [
-
-    //       Back    face
-    0f32,    0f32,   0f32,   0f32, 0f32, // bottom-left
-    100f32, 0f32,   0f32,   1f32, 0f32, // bottom-right
-    100f32, 100f32, 0f32,   1f32, 1f32, // top-right
-    100f32, 100f32, 0f32,   1f32, 1f32, // top-right
-    0f32,    100f32, 0f32,   0f32, 1f32, // top-left
-    0f32,    0f32,   0f32,   0f32, 0f32, // bottom-left
-    //       Front   face
-    0f32,    0f32,   100f32, 0f32, 0f32, // bottom-left
-    100f32, 100f32, 100f32, 1f32, 1f32, // top-right
-    100f32, 0f32,   100f32, 1f32, 0f32, // bottom-right
-    100f32, 100f32, 100f32, 1f32, 1f32, // top-right
-    0f32,    0f32,   100f32, 0f32, 0f32, // bottom-left
-    0f32,    100f32, 100f32, 0f32, 1f32, // top-left
-    //       Left    face
-    0f32,    100f32, 100f32, 1f32, 0f32, // top-right
-    0f32,    0f32,   0f32,   0f32, 1f32, // bottom-left
-    0f32,    100f32, 0f32,   1f32, 1f32, // top-left
-    0f32,    0f32,   0f32,   0f32, 1f32, // bottom-left
-    0f32,    100f32, 100f32, 1f32, 0f32, // top-right
-    0f32,    0f32,   100f32, 0f32, 0f32, // bottom-right
-    //       Right   face
-     100f32, 100f32, 100f32, 1f32, 0f32, // top-left
-     100f32, 100f32, 0f32,   1f32, 1f32, // top-right
-     100f32, 0f32,   0f32,   0f32, 1f32, // bottom-right
-     100f32, 0f32,   0f32,   0f32, 1f32, // bottom-right
-     100f32, 0f32,   100f32, 0f32, 0f32, // bottom-left
-     100f32, 100f32, 100f32, 1f32, 0f32, // top-left
-    //       Bottom  face
-    0f32,    0f32,   0f32,   0f32, 1f32, // top-right
-     100f32, 0f32,   100f32, 1f32, 0f32, // bottom-left
-     100f32, 0f32,   0f32,   1f32, 1f32, // top-left
-     100f32, 0f32,   100f32, 1f32, 0f32, // bottom-left
-    0f32,    0f32,   0f32,   0f32, 1f32, // top-right
-    0f32,    0f32,   100f32, 0f32, 0f32, // bottom-right
-    //       Top     face
-    0f32,    100f32, 0f32,   0f32, 1f32, // top-left
-     100f32, 100f32, 0f32,   1f32, 1f32, // top-right
-     100f32, 100f32, 100f32, 1f32, 0f32, // bottom-right
-     100f32, 100f32, 100f32, 1f32, 0f32, // bottom-right
-    0f32,    100f32, 100f32, 0f32, 0f32, // bottom-left
-    0f32,    100f32, 0f32,   0f32, 1f32  // top-left
-
+    -50f32, -50f32, -50f32,  0f32, 0f32, // Bottom-left
+     50f32, -50f32, -50f32,  1f32, 0f32, // bottom-right
+     50f32,  50f32, -50f32,  1f32, 1f32, // top-right
+     50f32,  50f32, -50f32,  1f32, 1f32, // top-right
+    -50f32,  50f32, -50f32,  0f32, 1f32, // top-left
+    -50f32, -50f32, -50f32,  0f32, 0f32, // bottom-left
+    // Front face
+    -50f32, -50f32,  50f32,  0f32, 0f32, // bottom-left
+     50f32,  50f32,  50f32,  1f32, 1f32, // top-right
+     50f32, -50f32,  50f32,  1f32, 0f32, // bottom-right
+     50f32,  50f32,  50f32,  1f32, 1f32, // top-right
+    -50f32, -50f32,  50f32,  0f32, 0f32, // bottom-left
+    -50f32,  50f32,  50f32,  0f32, 1f32, // top-left
+    // Left face
+    -50f32,  50f32,  50f32,  1f32, 0f32, // top-right
+    -50f32, -50f32, -50f32,  0f32, 1f32, // bottom-left
+    -50f32,  50f32, -50f32,  1f32, 1f32, // top-left
+    -50f32, -50f32, -50f32,  0f32, 1f32, // bottom-left
+    -50f32,  50f32,  50f32,  1f32, 0f32, // top-right
+    -50f32, -50f32,  50f32,  0f32, 0f32, // bottom-right
+    // Right face
+     50f32,  50f32,  50f32,  1f32, 0f32, // top-left
+     50f32,  50f32, -50f32,  1f32, 1f32, // top-right
+     50f32, -50f32, -50f32,  0f32, 1f32, // bottom-right
+     50f32, -50f32, -50f32,  0f32, 1f32, // bottom-right
+     50f32, -50f32,  50f32,  0f32, 0f32, // bottom-left
+     50f32,  50f32,  50f32,  1f32, 0f32, // top-left
+    // Bottom face
+    -50f32, -50f32, -50f32,  0f32, 1f32, // top-right
+     50f32, -50f32,  50f32,  1f32, 0f32, // bottom-left
+     50f32, -50f32, -50f32,  1f32, 1f32, // top-left
+     50f32, -50f32,  50f32,  1f32, 0f32, // bottom-left
+    -50f32, -50f32, -50f32,  0f32, 1f32, // top-right
+    -50f32, -50f32,  50f32,  0f32, 0f32, // bottom-right
+    // Top face
+    -50f32,  50f32, -50f32,  0f32, 1f32, // top-left
+     50f32,  50f32, -50f32,  1f32, 1f32, // top-right
+     50f32,  50f32,  50f32,  1f32, 0f32, // bottom-right
+     50f32,  50f32,  50f32,  1f32, 0f32, // bottom-right
+    -50f32,  50f32,  50f32,  0f32, 0f32, // bottom-left
+    -50f32,  50f32, -50f32,  0f32, 1f32  // top-left
 ];
 
 // static INDICES: [GLuint; 10] = [0, 1, 2, 2, 0];
@@ -113,8 +110,7 @@ fn main() {
 
         gl::Enable(gl::MULTISAMPLE);
         gl::Enable(gl::DEPTH_TEST);
-        // We use gl::GREATER otherwise it looks completly wrong
-        gl::DepthFunc(gl::GREATER);
+        gl::DepthFunc(gl::LESS);
         gl::Enable(gl::CULL_FACE);
         gl::CullFace(gl::FRONT);
         // gl::FrontFace(gl::CCW);
@@ -123,7 +119,7 @@ fn main() {
             glm::vec3(0f32, 0f32, -100f32),
             glm::vec3(100f32, 0f32, 0f32),
             glm::vec3(100f32, 0f32, -100f32),
-            // glm::vec3(0f32, 0f32, -100f32),
+            glm::vec3(0f32, 100f32, 0f32),
         ];
         let tris: Vec<Object> = vert_pos
             .iter()
@@ -169,16 +165,13 @@ fn main() {
                 handle_window_event(&mut window, event);
             }
 
-            gl::ClearColor(0.2, 0.2, 0.2, 1.0);
-            // Here we set the depth clear value (the default value of the depth buffer) to zero to
-            // get gl::GREATER to work properly
-            gl::ClearDepth(0.0);
+            gl::ClearColor(0.4, 0.4, 0.4, 1.0);
             gl::Clear(gl::COLOR_BUFFER_BIT | gl::DEPTH_BUFFER_BIT);
 
             let (width, height) = window.get_size();
             // here we make a isometric projection, which is just an orthographic projection and
             // rotating the x axis by arctangent of 1/sqrt(2), and the y axis by 45 deg or pi/4
-            let proj = glm::ortho(0f32, width as f32, height as f32, 0f32, 0.1f32, 1000f32);
+            let proj = glm::ortho(0f32, width as f32, 0f32, height as f32, 90f32, 2000f32);
 
             let model_center = glm::vec3(
                 // we need to compensate for the isometric projection, because it distorts
@@ -198,8 +191,10 @@ fn main() {
             for (vert, tri) in vert_pos.iter().zip(tris.iter()) {
                 let mut model = glm::Mat4::new_scaling(1f32);
                 model = glm::translate(&model, &model_center);
+                model = glm::translate(&model, &glm::vec3(50f32, 0f32, -50f32));
+                // model = glm::rotate_y(&model, glfw.get_time() as f32);
+                model = glm::translate(&model, &glm::vec3(-50f32, -100f32, 50f32));
                 model = glm::translate(&model, vert);
-                model = glm::translate(&model, &glm::vec3(-50f32, -50f32, -50f32));
 
                 let mvp = proj * view * model;
                 tri.shader.set_mat4("mvp", &mvp);
